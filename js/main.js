@@ -97,20 +97,3 @@ sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
 sr.reveal(`.category__data, .trick__content, .footer__content`,{interval: 100})
 sr.reveal(`.about__data, .discount__img`,{origin: 'left'})
 sr.reveal(`.about__img, .discount__data`,{origin: 'right'})
-
-/*=============== LIKE ===============*/
-let likeCount = 0;
-let liked = false;
-
-function toggleLike() {
-    if (!liked) {
-        likeCount++;
-        liked = true;
-    } else {
-        likeCount--;
-        liked = false;
-    }
-
-    document.getElementById('like-count').textContent = likeCount;
-    document.getElementById('like-button').classList.toggle('clicked');
-}
